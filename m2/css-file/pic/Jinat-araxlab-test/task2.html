@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard Shell</title>
     <style>
-        section{
-            padding: 10px;
-            border: gray;
-            box-shadow: 3px 3px 4px gray;
+        .container{
+            padding: 20px;
+            border:2px solid gray;
+            box-shadow: 3px 3px 4px 3px gray;
+            display: grid;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
         }
         .head{
             position: sticky;
@@ -16,19 +20,97 @@
             
             background-color: black;
             color: white;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
 
+        }
+        .down{
+            grid-template-columns: 2fr 8fr 2fr;
+            display: grid;
+           gap: 15px;
+        }
+
+        .side-bar{
+          
+           grid-row: span 2; 
+           border: 3px dashed gray;
+           border-radius: 10px;
+           padding-left: 20px;
+           
+
+        }
+        .a h1{
+            background-color: black;
+            color: white;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+        .card-top{
+           display: flex;
+           justify-content: space-evenly;
+           align-items: center;
+           gap:15px ;
+           
+           
+        }
+        .box{
+         
+            height:80px;
+            width:150px ;
+            border: 2px solid gray;
+            padding-top: 2px;
+            padding-bottom: 20px;
+            padding-left: 10px;
+            overflow: hidden;
+            border: 2px solid gray;
+            border-radius: 10px;
+            box-shadow: 2px 2px gray;
+
+        }
+        .cards{
+            display: grid;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+
+        }
+        .box h4{
+            margin: 0;
+            padding: 0;
+        }
+        .box h4{
+            margin: 0;
+            padding: 0;
+        }
+        .mid-box {
+            
+            display: grid;
+            grid-template-columns: repeat(6,1fr);
+            grid-template-rows: repeat(3,1fr);
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .box-e{
+            border: 2px solid gray;
+            grid-column: span 2;
+            
+            
         }
 
     </style>
 </head>
 <body>
-  <section>
+  <section class="container" >
     <div class="head">
         <h1>HEADER</h1>
     </div>
-    <section>
-        <div>
-            <div class="side-bar"><h2>
+    <section class="down">
+        <div class="side-bar">
+            <div class="a" ><h2>
                 SIDEBAR
             </h2></div>
             <div>
@@ -42,40 +124,43 @@
             </div>
         </div>
         <div class="cards">
-            <div class="box">
-                <h4> grid-template</h4>
-                <h1>vertical timeline</h1>
+            <div class="card-top">
+                <div class="box">
+                <h5> grid-template</h5>
+                <h3>vertical timeline</h3>
 
             </div>
             <div class="box">
-                <h4> grid-template</h4>
-                <h1>vertical timeline</h1>
+                <h5> grid-template</h5>
+                <h3>vertical timeline</h3>
 
             </div>
             <div class="box">
-                <h4> grid-template</h4>
-                <h1>vertical timeline</h1>
+                <h5> grid-template</h4>
+                <h3>vertical timeline</h3>
 
             </div>
             <div class="box">
-                <h4> grid-template</h4>
-                <h1>vertical timeline</h1>
+                <h5> grid-template</h5>
+                <h3>vertical timeline</h3>
 
+            </div>
             </div>
             <div>
-                <div mid-thead><h1>
+                <div class="head" ><h3>
                     sticky thead
 
-                </h1></div>
-                <div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                </h3></div>
+                <div class="mid-box">
+                    <div class="box-e"> <h5>box-1</h5></div>
+                    <div class="box-e"> <h5>box-2</h5></div>
+                    <div class="box-e"> <h5>box-3</h5></div>
+                   
                 </div>
             </div>
         </div>
-        <div>
-            <div><h2>
+        <div class="side-bar" >
+            <div class="a"><h2>
                 ASIDE
             </h2></div>
             <div>
